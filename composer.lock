@@ -1,0 +1,130 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ce1c7819a5d0fbd52f8fccf513a5c32d",
+    "packages": [
+        {
+            "name": "phalapi/kernal",
+            "version": "2.15.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phalapi/kernal.git",
+                "reference": "9befc085285e4d0e51cd1c0d7417405a2daf6f77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phalapi/kernal/zipball/9befc085285e4d0e51cd1c0d7417405a2daf6f77",
+                "reference": "9befc085285e4d0e51cd1c0d7417405a2daf6f77",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "phalapi/notorm": "2.*.*",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/bootstrap.php",
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "PhalApi\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dogstar Huang",
+                    "email": "chanzonghuang@gmail.com",
+                    "homepage": "http://my.oschina.net/dogstar",
+                    "role": "Developer"
+                },
+                {
+                    "name": "kwan",
+                    "email": "303198069@qq.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PhalApi 2.x 框架核心部分。",
+            "homepage": "https://www.phalapi.net/",
+            "keywords": [
+                "api",
+                "framework",
+                "phalapi"
+            ],
+            "time": "2020-06-29T08:53:48+00:00"
+        },
+        {
+            "name": "phalapi/notorm",
+            "version": "2.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phalapi/notorm.git",
+                "reference": "337cac09d3563a325d574298b87c6a7a5f8f759f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phalapi/notorm/zipball/337cac09d3563a325d574298b87c6a7a5f8f759f",
+                "reference": "337cac09d3563a325d574298b87c6a7a5f8f759f",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhalApi\\NotORM\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dogstar Huang",
+                    "email": "chanzonghuang@gmail.com",
+                    "homepage": "http://my.oschina.net/dogstar",
+                    "role": "Developer"
+                }
+            ],
+            "description": "基于NotORM类库的优化版本，专门用于PhalApi 2.x 开源接口框架。",
+            "homepage": "http://www.phalapi.net",
+            "keywords": [
+                "api",
+                "notorm",
+                "phalapi"
+            ],
+            "time": "2020-03-10T11:52:02+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.3.3"
+    },
+    "platform-dev": []
+}

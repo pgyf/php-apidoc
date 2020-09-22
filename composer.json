@@ -1,0 +1,34 @@
+{
+  "name": "phpyii/php-apidoc",
+  "description": "php接口文档项目",
+  "license": "MIT",
+  "keywords": [
+    "php",
+    "php-apidoc",
+    "apidoc",
+    "api",
+	"doc"
+  ],
+  "homepage": "https://github.com/phpyii/php-apidoc",
+  "authors": [
+    {
+      "name": "lyf",
+      "email": "381296986@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+	
+    }
+  },
+  "support": {
+    "issues": "https://github.com/phpyii/php-apidoc/issues",
+    "source": "https://github.com/phpyii/php-apidoc"
+  },
+  "require": {
+    "php" : ">=5.3.3",
+	"phalapi/kernal": "2.15.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
