@@ -93,7 +93,7 @@ return array(
     'PhalApi API Framework' => 'PhalApi开源接口框架',
     'Tips: ' => '温馨提示：',
     'A PHP framework foucs on API fast development.' => '接口，从简单开始！',
-    'This API Document will be generated automately by PHP code and comments.' => '此接口文档根据接口代码和注释实时自动生成，可在接口类的文件注释的第一行修改左侧菜单标题。',
+    'This API Document will be generated automately by PHP code and comments.' => '此接口文档根据接口代码和配置实时自动生成，可在接口类的文件注释的第一行修改左侧菜单标题。',
     'This API Document will be generated automately by PHP code and comments. More detail please visit <a href="{url}" target="_blank">Docs</a>.' => '此接口文档根据接口代码和注释实时自动生成，帮助文档请见<a href="{url}" target="_blank">PhalApi 2.x 开发文档</a>。',
     'arrayList' => '数组',
 );
