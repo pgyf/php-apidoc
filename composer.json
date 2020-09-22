@@ -7,7 +7,7 @@
     "php-apidoc",
     "apidoc",
     "api",
-	"doc"
+    "doc"
   ],
   "homepage": "https://github.com/phpyii/php-apidoc",
   "authors": [

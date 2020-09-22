@@ -23,7 +23,7 @@ composer create-project phpyii/php-apidoc:dev-master
 
 1、访问路径配置到public下
 
-2、config/app.php中可以配置项目名和访问密码
+2、config/app.php中可以配置项目名、访问密码等
 
 3、src/app下为接口项目
 
