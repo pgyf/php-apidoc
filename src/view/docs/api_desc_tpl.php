@@ -219,7 +219,7 @@ foreach ($rules as $key => $rule){
     
     $source = isset($rule['source']) ? $rule['source'] : '';
     //数据源为server和header时该参数不需要提供
-    if ($source == 'server' || $source == 'header') {
+    if ($source == 'server') { // || $source == 'header'
         continue;
     }
     $name = $rule['name'];

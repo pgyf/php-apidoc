@@ -22,11 +22,15 @@
         function getData(mehtod) {
             var data = new FormData();
             var param = [];
+            var header = [];
             var hasData = false;
             $("td input").each(function(index,e) {
                 if ($.trim(e.value)){
                     if (e.type != 'file'){
-                        if ($(e).data('source') == 'get') {
+                        if ($(e).data('source') == 'header') {
+                            header.push({name: e.name, value: e.value});
+                        }
+                        else if ($(e).data('source') == 'get') {
                             param.push(e.name + '=' + e.value);
                         }
                         else if (mehtod == 'get') {
@@ -53,7 +57,7 @@
                 }
             });
             param = param.join('&');
-            return {param:param, data:data, hasData:hasData };
+            return {param:param, data:data, hasData:hasData, header : header };
         }
         
         $(function(){
@@ -78,6 +82,11 @@
                     cache: false,
                     processData: false,
                     contentType: false,
+                    beforeSend: function(xhr) {
+                        for(var h in data.header){
+                            xhr.setRequestHeader(data.header[h].name, data.header[h].value);
+                        }
+                    },
                     success:function(res,status,xhr){
                         console.log(xhr);
                         var statu = xhr.status + ' ' + xhr.statusText;
