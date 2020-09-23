@@ -122,7 +122,9 @@ class ApiList extends ApiOnline
             }
         }
         // 主题风格，fold = 折叠，expand = 展开
-        $theme = isset($_GET['type']) ? $_GET['type'] : 'fold';
+        //if (empty($theme) || substr(PHP_SAPI, 0, 3) != 'cli') {
+            $theme = isset($_GET['type']) ? $_GET['type'] : 'fold';
+        //}
         if (!in_array($theme, array('fold', 'expand'))) {
             $theme = 'fold';
         }

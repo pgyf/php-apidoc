@@ -16,7 +16,7 @@ class Ip extends \core\Api {
     
    public function getRules() {
         return array(
-            '/service/getIpInfo2' => array(
+            'getIp' => array(
                 'title' => 'ip查询接口',
                 'desc' => 'ip查询接口描述',
                 'url' => '/service/getIpInfo2.php',

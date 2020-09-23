@@ -10,9 +10,9 @@ class Test2 extends \core\Api {
 
     public function getRules() {
         return array(
-            '/project/livedetaillist' => array(
+            'livedetaillist' => array(
                 'method' => 'post',
-                //'url' => '/test',
+                'url' => '/project/livedetaillist',
                 'title' => '测试接口',
                 'desc' => '测试接口描述',
                 //'exceptions' => array('401'=> '异常了'),

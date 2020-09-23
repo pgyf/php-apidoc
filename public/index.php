@@ -41,10 +41,13 @@ $detailTpl = API_ROOT . '/src/view/docs/api_desc_tpl.php';
 $listTpl = API_ROOT . '/src/view/docs/api_list_tpl.php';
 
 if (substr(PHP_SAPI, 0, 3) == 'cli') {
+    $theme = 'fold';
+    if(count($argv) > 1){
+        $theme = $argv[1] == 'fold' ? 'fold' : 'expand';
+    }
     // 生成离线文档
-    echo '暂未实现';exit;
-    //$apiHtml = new \PhalApi\Helper\ApiStaticCreate($projectName, 'fold', $detailTpl);
-    //$apiHtml->render($listTpl);
+    $apiHtml = new core\ApiStaticCreate($projectName, $theme, $detailTpl);
+    $apiHtml->render($listTpl);
 } else if (!empty($_GET['detail'])) {
     checkViewCode();
 

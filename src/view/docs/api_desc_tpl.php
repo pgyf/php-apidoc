@@ -27,8 +27,8 @@ echo <<<EOT
     <link rel="stylesheet" href="{$semanticPath}components/label.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <script src="/static/jquery.min.js"></script>
-    <script src="/static/jquery.cookie.min.js"></script>
+    <script src="../static/jquery.min.js"></script>
+    <script src="../static/jquery.cookie.min.js"></script>
 </head>
 
 <body>
@@ -344,8 +344,8 @@ if (!empty($demoCodes)) {
 </div>
 
 <!-- 代码高亮 -->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 EOT;

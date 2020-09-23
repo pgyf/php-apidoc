@@ -28,8 +28,8 @@ $semanticPath = '/semantic/'; // 本地
     <link rel="stylesheet" href="<?php echo $semanticPath; ?>components/label.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <script src="/static/jquery.min.js"></script>
-    <script src="/static/jquery.cookie.min.js"></script>
+    <script src="../static/jquery.min.js"></script>
+    <script src="../static/jquery.cookie.min.js"></script>
     
         
     <style type="text/css">

@@ -47,13 +47,4 @@ class Test extends \core\Api {
         );
     }
 
-//    /**
-//     * 测试
-//     * @desc 测试接口
-//     * @api_url api/test
-//     * @return int user_id 新账号的ID
-//     */
-//    public function test() {
-//        return array('user_id' => 111);
-//    }
 }

@@ -27,6 +27,14 @@ composer create-project phpyii/php-apidoc:dev-master
 
 3、src/app下为接口项目
 
+
+生成离线文档
+------------
+
+php ./public/index.php 
+
+脚本执行完毕！离线文档保存路径为：/path/to/apidoc/public/docs
+
 效果图
 ------------
 <img src="https://camo.githubusercontent.com/25c9525feb1c3a6357f235a7cf136d3aea3bf60d/687474703a2f2f63646e372e6f6b61796170692e636f6d2f7965737965736170695f32303230303331303232353935325f64333139636331393761333166386633353232613832363433626633316436302e706e67" alt="" data-canonical-src="http://cdn7.okayapi.com/yesyesapi_20200310225952_d319cc197a31f8f3522a82643bf31d60.png" style="max-width:100%;">
