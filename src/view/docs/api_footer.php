@@ -19,16 +19,22 @@
 
     <script type="text/javascript">
 	
-        function getData() {
+        function getData(mehtod) {
             var data = new FormData();
             var param = [];
+            var hasData = false;
             $("td input").each(function(index,e) {
                 if ($.trim(e.value)){
                     if (e.type != 'file'){
                         if ($(e).data('source') == 'get') {
                             param.push(e.name + '=' + e.value);
-                        } else {
+                        }
+                        else if (mehtod == 'get') {
+                           param.push(e.name + '=' + e.value); 
+                        }
+                        else {
                             data.append(e.name, e.value);
+                            hasData = true;
                         }
 
                         if (e.name != "service") $.cookie(e.name, e.value, {expires: 30});
@@ -36,16 +42,18 @@
                         var files = e.files;
                         if (files.length == 1){
                             data.append(e.name, files[0]);
+                            hasData = true;
                         } else{
                             for (var i = 0; i < files.length; i++) {
                                 data.append(e.name + '[]', files[i]);
+                                hasData = true;
                             }
                         }
                     }
                 }
             });
             param = param.join('&');
-            return {param:param, data:data};
+            return {param:param, data:data, hasData:hasData };
         }
         
         $(function(){
@@ -53,17 +61,20 @@
             $("#submit").on("click",function(){
                 $("#json_output").html('<div class="ui active inverted dimmer"><div class="ui text loader">接口请求中……</div></div>');
                 $("#json_output").show();
-
-                var data = getData();
+                var method = $(this).data('method');
+                var data = getData(method);
                 var url_arr = $("input[name=request_url]").val().split('?');
                 var url = url_arr.shift();
                 var param = url_arr.join('?');
                 param = param.length > 0 ? param + '&' + data.param : data.param;
-                url = url + '?' + param;
+                if(param){
+                    url = url + '?' + param;
+                }
+                
                 $.ajax({
                     url: url,
-                    type:'post',
-                    data:data.data,
+                    type: method || 'post',
+                    data: data.hasData ? data.data : null,
                     cache: false,
                     processData: false,
                     contentType: false,
@@ -75,10 +86,11 @@
                         $("#json_output").html('<pre>' + statu + '<br/>' + header + '<br/>' + json_text + '</pre>');
                         $("#json_output").show();
                     },
-                    error:function(error){
-                        $("#json_output").html('接口请求失败：' + error);
+                    error:function(xhr,status,error){
+                         var statu = xhr.status + ' ' + xhr.statusText;
+                        $("#json_output").html('接口请求失败：' + '<pre>' + statu + '<br/>');
                     }
-                })
+                });
             })
 
             fillHistoryData();

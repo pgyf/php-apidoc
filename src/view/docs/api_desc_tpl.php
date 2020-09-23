@@ -265,7 +265,7 @@ EOT;
 
 <div class="ui fluid action input">
       <input placeholder="请求的接口链接" type="text" name="request_url" value="<?php echo $apiUrl; ?>" >
-      <button class="ui button blue" id="submit" ><?php echo \PhalApi\T('Request API'); ?> (<?php echo $apiMethod; ?>)</button>
+      <button class="ui button blue" data-method="<?php echo $apiMethod; ?>" id="submit" ><?php echo \PhalApi\T('Request API'); ?> (<?php echo $apiMethod; ?>)</button>
 </div>
 
 <div class="ui blue message" id="json_output" style="overflow: auto;">

@@ -30,7 +30,7 @@ return array(
         ),
         'api2' => array(
             'name' => '项目2',
-            'base_url' => 'http://www.test2.com',
+            'base_url' => 'https://live.imooc.com',
         )
     ),
     
@@ -43,9 +43,9 @@ return array(
 //            'sign' => array('name' => 'sign', 'require' => true),
 //        ),
 //        //api2项目
-        'api2' => array(
-            'sign' => array('name' => 'sign', 'require' => true),
-        ),
+//        'api2' => array(
+//            'sign' => array('name' => 'sign', 'require' => true),
+//        ),
     ),
     
 );
