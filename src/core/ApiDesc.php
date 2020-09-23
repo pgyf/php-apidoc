@@ -74,9 +74,9 @@ class ApiDesc extends ApiOnline {
             $apiUrl = trim($baseUrl, '/') . '/' . trim($rules['url'], '/');    
             unset($rules['url']);
         }
-        else if(!is_int($action)){
-            $apiUrl = trim($baseUrl, '/') . '/' . trim($action, '/');    
-        }
+//        else if(!is_int($action)){
+//            $apiUrl = trim($baseUrl, '/') . '/' . trim($action, '/');    
+//        }
         if (isset($rules['return'])) {
             $returns = $rules['return'];
             unset($rules['return']);

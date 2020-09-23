@@ -101,9 +101,9 @@ class ApiList extends ApiOnline
                     if(isset($mValue['url'])){
                         $apiUrl = $mValue['url'];
                     }
-                    else if(!is_int($mkey)){
-                        $apiUrl = $mkey;
-                    }
+//                    else if(!is_int($mkey)){
+//                        $apiUrl = $mkey;
+//                    }
                     if(isset($mValue['title'])){
                         $title = $mValue['title'];
                     }
