@@ -27,8 +27,8 @@ echo <<<EOT
     <link rel="stylesheet" href="{$semanticPath}components/label.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <script src="../static/jquery.min.js"></script>
-    <script src="../static/jquery.cookie.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 </head>
 
 <body>
